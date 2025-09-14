@@ -1,0 +1,11 @@
+FROM alpine:3.22
+
+RUN apk update && \
+    apk add dovecot && \
+    rm -rf /var/cache/apk/*
+
+EXPOSE 24/tcp
+EXPOSE 143/tcp
+EXPOSE 993/tcp
+
+CMD /usr/sbin/dovecot -F

@@ -1,0 +1,22 @@
+; Podman pods
+$ORIGIN 88.10.in-addr.arpa.
+$TTL 86400
+@                   IN  SOA     ns.saoirse.home.arpa. tamado.tamado.codes. (
+                        1       ; serial
+                        7200    ; refresh
+                        3600    ; retry
+                        1209600 ; expire
+                        3600    ; nxdomain ttl
+                    )
+                    IN  NS      ns.saoirse.home.arpa.
+
+; PTR records
+1.0                 IN  PTR     saoirse.home.arpa.
+2.0                 IN  PTR     ns.saoirse.home.arpa.
+11.0                IN  PTR     kafka-1.saoirse.home.arpa.
+12.0                IN  PTR     kafka-2.saoirse.home.arpa.
+13.0                IN  PTR     kafka-3.saoirse.home.arpa.
+100.0               IN  PTR     postgres.saoirse.home.arpa.
+101.0               IN  PTR     apps.saoirse.home.arpa.
+141.0               IN  PTR     mail.saoirse.home.arpa.
+181.0               IN  PTR     nifi.saoirse.home.arpa.

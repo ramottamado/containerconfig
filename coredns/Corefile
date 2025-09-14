@@ -1,0 +1,18 @@
+. {
+    forward . 0.0.0.0:54
+    errors
+}
+
+saoirse.home.arpa. {
+    file /etc/coredns/db.saoirse.home.arpa
+    log
+    errors
+}
+
+88.10.in-addr.arpa. {
+    file /etc/coredns/88.10.in-addr.arpa
+    log
+    errors
+}
+
+import /etc/coredns/99-additional.corefile

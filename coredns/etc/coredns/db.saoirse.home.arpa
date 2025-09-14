@@ -1,0 +1,34 @@
+; Podman pods
+$ORIGIN saoirse.home.arpa.
+$TTL 3600
+@                   IN  SOA     ns.saoirse.home.arpa. tamado.tamado.codes. (
+                        1       ; serial
+                        7200    ; refresh
+                        3600    ; retry
+                        1209600 ; expire
+                        3600    ; nxdomain ttl
+                    )
+                    IN  NS      ns.saoirse.home.arpa.
+                    IN  A       10.88.0.1
+
+; A records
+ns                  IN  A       10.88.0.2
+kafka-1             IN  A       10.88.0.11
+kafka-2             IN  A       10.88.0.12
+kafka-3             IN  A       10.88.0.13
+postgres            IN  A       10.88.0.100
+apps                IN  A       10.88.0.101
+mail                IN  A       10.88.0.141
+nifi                IN  A       10.88.0.181
+
+; CNAME records
+calendar.apps       IN  CNAME   apps
+roundcube.apps      IN  CNAME   apps
+
+; SRV records
+; NOTE: Weight should be > 0, for HAProxy to pick as backend
+_mail._tcp          IN  SRV     0 100 80 mail
+_nifi._https        IN  SRV     0 100 8443 nifi
+
+; HTTPS records
+_8443._https.nifi   IN  HTTPS   0 .
