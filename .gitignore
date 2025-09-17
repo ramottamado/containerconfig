@@ -3,3 +3,4 @@
 *.crt
 *.db
 passwd
+kafka-connect/connectors
