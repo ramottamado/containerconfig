@@ -4,3 +4,5 @@
 *.db
 passwd
 kafka-connect/connectors
+mail/roundcube/data
+mail/roundcube/db
