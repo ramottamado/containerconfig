@@ -26,7 +26,6 @@ nifi                IN  A       10.88.0.181
 
 ; CNAME records
 calendar.apps       IN  CNAME   apps
-roundcube.apps      IN  CNAME   apps
 
 ; SRV records
 ; NOTE: Weight should be > 0, for HAProxy to pick as backend
