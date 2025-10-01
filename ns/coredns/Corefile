@@ -9,8 +9,8 @@ saoirse.home.arpa. {
     errors
 }
 
-88.10.in-addr.arpa. {
-    file /etc/coredns/88.10.in-addr.arpa
+0.88.10.in-addr.arpa. {
+    file /etc/coredns/0.88.10.in-addr.arpa
     log
     errors
 }
