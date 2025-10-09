@@ -19,6 +19,7 @@ $TTL 86400
 21                  IN  PTR     connect-1.saoirse.home.arpa.
 22                  IN  PTR     connect-2.saoirse.home.arpa.
 23                  IN  PTR     connect-3.saoirse.home.arpa.
+99                  IN  PTR     mysql.saoirse.home.arpa.
 100                 IN  PTR     postgres.saoirse.home.arpa.
 101                 IN  PTR     apps.saoirse.home.arpa.
 141                 IN  PTR     mail.saoirse.home.arpa.
