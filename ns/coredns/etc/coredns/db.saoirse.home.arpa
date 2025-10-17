@@ -19,7 +19,6 @@ kafka-3             IN  A       10.88.0.13
 connect-1           IN  A       10.88.0.21
 connect-2           IN  A       10.88.0.22
 connect-3           IN  A       10.88.0.23
-mysql               IN  A       10.88.0.99
 postgres            IN  A       10.88.0.100
 apps                IN  A       10.88.0.101
 mail                IN  A       10.88.0.141
