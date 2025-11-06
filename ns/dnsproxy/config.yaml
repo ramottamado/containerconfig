@@ -5,8 +5,6 @@
 # from the config file.
 ---
 cache-min-ttl: 600
-edns: true
-http3: true
 listen-addrs:
   - "0.0.0.0"
 listen-ports:
@@ -17,11 +15,7 @@ ratelimit-subnet-len-ipv4: 24
 ratelimit-subnet-len-ipv6: 64
 udp-buf-size: 0
 upstream:
-  - "https://1.1.1.1/dns-query"
-  - "https://1.0.0.1/dns-query"
   - "https://8.8.8.8/dns-query"
   - "https://8.8.4.4/dns-query"
-  - "https://9.9.9.10/dns-query"
-  - "https://149.112.112.10/dns-query"
 upstream-mode: 'load_balance'
 timeout: '30s'

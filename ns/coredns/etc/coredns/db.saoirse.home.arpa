@@ -22,6 +22,10 @@ connect-3           IN  A       10.88.0.23
 postgres            IN  A       10.88.0.100
 apps                IN  A       10.88.0.101
 mail                IN  A       10.88.0.141
+spark-master        IN  A       10.88.0.161
+spark-hs            IN  A       10.88.0.162
+spark-worker-1      IN  A       10.88.0.163
+spark-worker-2      IN  A       10.88.0.164
 nifi                IN  A       10.88.0.181
 
 ; CNAME records

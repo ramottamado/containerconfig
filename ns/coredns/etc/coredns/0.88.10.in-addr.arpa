@@ -22,4 +22,8 @@ $TTL 86400
 100                 IN  PTR     postgres.saoirse.home.arpa.
 101                 IN  PTR     apps.saoirse.home.arpa.
 141                 IN  PTR     mail.saoirse.home.arpa.
+161                 IN  PTR     spark-master.saoirse.home.arpa.
+162                 IN  PTR     spark-hs.saoirse.home.arpa.
+163                 IN  PTR     spark-worker-1.saoirse.home.arpa.
+164                 IN  PTR     spark-worker-2.saoirse.home.arpa.
 181                 IN  PTR     nifi.saoirse.home.arpa.
