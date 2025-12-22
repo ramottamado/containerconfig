@@ -22,13 +22,8 @@ $TTL 86400
 40                  IN  PTR     trino-coord.saoirse.home.arpa.
 41                  IN  PTR     trino-worker-1.saoirse.home.arpa.
 42                  IN  PTR     trino-worker-2.saoirse.home.arpa.
-70                  IN  PTR     ozone-gateway.saoirse.home.arpa.
-71                  IN  PTR     ozone-dn-1.saoirse.home.arpa.
-72                  IN  PTR     ozone-dn-2.saoirse.home.arpa.
-73                  IN  PTR     ozone-dn-3.saoirse.home.arpa.
-78                  IN  PTR     ozone-scm.saoirse.home.arpa.
-79                  IN  PTR     ozone-om.saoirse.home.arpa.
-80                  IN  PTR     hive-hms.saoirse.home.arpa.
+60                  IN  PTR     s3.saoirse.home.arpa.
+80                  IN  PTR     hive.saoirse.home.arpa.
 99                  IN  PTR     mysql.saoirse.home.arpa.
 100                 IN  PTR     postgres.saoirse.home.arpa.
 101                 IN  PTR     apps.saoirse.home.arpa.

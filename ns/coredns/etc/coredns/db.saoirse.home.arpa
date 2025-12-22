@@ -22,13 +22,8 @@ connect-3           IN  A       10.88.0.23
 trino-coord         IN  A       10.88.0.40
 trino-worker-1      IN  A       10.88.0.41
 trino-worker-2      IN  A       10.88.0.42
-ozone-gateway       IN  A       10.88.0.70
-ozone-dn-1          IN  A       10.88.0.71
-ozone-dn-2          IN  A       10.88.0.72
-ozone-dn-3          IN  A       10.88.0.73
-ozone-scm           IN  A       10.88.0.78
-ozone-om            IN  A       10.88.0.79
-hive-hms            IN  A       10.88.0.80
+s3                  IN  A       10.88.0.60
+hive                IN  A       10.88.0.80
 mysql               IN  A       10.88.0.99
 postgres            IN  A       10.88.0.100
 apps                IN  A       10.88.0.101

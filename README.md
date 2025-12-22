@@ -1,3 +1,3 @@
 # containerconfig
 
-Configs for [PODS](https://github.com/ramottamado/pods)
+Configs for [pods](https://github.com/ramottamado/pods)
