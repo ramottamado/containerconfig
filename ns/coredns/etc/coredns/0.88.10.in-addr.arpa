@@ -1,35 +1,36 @@
 ; Podman pods
 $ORIGIN 0.88.10.in-addr.arpa.
 $TTL 86400
-@                   IN  SOA     ns.saoirse.home.arpa. tamado.tamado.codes. (
-                        1       ; serial
-                        7200    ; refresh
-                        3600    ; retry
-                        1209600 ; expire
-                        3600    ; nxdomain ttl
-                    )
-                    IN  NS      ns.saoirse.home.arpa.
+@                       IN  SOA     ns.saoirse.home.arpa. tamado.tamado.codes. (
+                            1       ; serial
+                            7200    ; refresh
+                            3600    ; retry
+                            1209600 ; expire
+                            3600    ; nxdomain ttl
+                        )
+                        IN  NS      ns.saoirse.home.arpa.
 
 ; PTR records
-1                   IN  PTR     saoirse.home.arpa.
-2                   IN  PTR     ns.saoirse.home.arpa.
-11                  IN  PTR     kafka-1.saoirse.home.arpa.
-12                  IN  PTR     kafka-2.saoirse.home.arpa.
-13                  IN  PTR     kafka-3.saoirse.home.arpa.
-21                  IN  PTR     connect-1.saoirse.home.arpa.
-22                  IN  PTR     connect-2.saoirse.home.arpa.
-23                  IN  PTR     connect-3.saoirse.home.arpa.
-40                  IN  PTR     trino-coord.saoirse.home.arpa.
-41                  IN  PTR     trino-worker-1.saoirse.home.arpa.
-42                  IN  PTR     trino-worker-2.saoirse.home.arpa.
-60                  IN  PTR     s3.saoirse.home.arpa.
-80                  IN  PTR     hive.saoirse.home.arpa.
-99                  IN  PTR     mysql.saoirse.home.arpa.
-100                 IN  PTR     postgres.saoirse.home.arpa.
-101                 IN  PTR     apps.saoirse.home.arpa.
-141                 IN  PTR     mail.saoirse.home.arpa.
-161                 IN  PTR     spark-master.saoirse.home.arpa.
-162                 IN  PTR     spark-hs.saoirse.home.arpa.
-163                 IN  PTR     spark-worker-1.saoirse.home.arpa.
-164                 IN  PTR     spark-worker-2.saoirse.home.arpa.
-181                 IN  PTR     nifi.saoirse.home.arpa.
+1                       IN  PTR     saoirse.home.arpa.
+2                       IN  PTR     ns.saoirse.home.arpa.
+10                      IN  PTR     ipa.saoirse.home.arpa.
+11                      IN  PTR     kafka-1.saoirse.home.arpa.
+12                      IN  PTR     kafka-2.saoirse.home.arpa.
+13                      IN  PTR     kafka-3.saoirse.home.arpa.
+21                      IN  PTR     connect-1.saoirse.home.arpa.
+22                      IN  PTR     connect-2.saoirse.home.arpa.
+23                      IN  PTR     connect-3.saoirse.home.arpa.
+40                      IN  PTR     trino-coord.saoirse.home.arpa.
+41                      IN  PTR     trino-worker-1.saoirse.home.arpa.
+42                      IN  PTR     trino-worker-2.saoirse.home.arpa.
+60                      IN  PTR     s3.saoirse.home.arpa.
+80                      IN  PTR     hive.saoirse.home.arpa.
+99                      IN  PTR     mysql.saoirse.home.arpa.
+100                     IN  PTR     postgres.saoirse.home.arpa.
+101                     IN  PTR     apps.saoirse.home.arpa.
+141                     IN  PTR     mail.saoirse.home.arpa.
+161                     IN  PTR     spark-master.saoirse.home.arpa.
+162                     IN  PTR     spark-hs.saoirse.home.arpa.
+163                     IN  PTR     spark-worker-1.saoirse.home.arpa.
+164                     IN  PTR     spark-worker-2.saoirse.home.arpa.
+181                     IN  PTR     nifi.saoirse.home.arpa.

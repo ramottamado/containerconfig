@@ -1,47 +1,61 @@
 ; Podman pods
 $ORIGIN saoirse.home.arpa.
 $TTL 3600
-@                   IN  SOA     ns.saoirse.home.arpa. tamado.tamado.codes. (
-                        1       ; serial
-                        7200    ; refresh
-                        3600    ; retry
-                        1209600 ; expire
-                        3600    ; nxdomain ttl
-                    )
-                    IN  NS      ns.saoirse.home.arpa.
-                    IN  A       10.88.0.1
+@                       IN  SOA     ns.saoirse.home.arpa. tamado.tamado.codes. (
+                            1       ; serial
+                            7200    ; refresh
+                            3600    ; retry
+                            1209600 ; expire
+                            3600    ; nxdomain ttl
+                        )
+                        IN  NS      ns.saoirse.home.arpa.
+                        IN  A       10.88.0.1
 
 ; A records
-ns                  IN  A       10.88.0.2
-kafka-1             IN  A       10.88.0.11
-kafka-2             IN  A       10.88.0.12
-kafka-3             IN  A       10.88.0.13
-connect-1           IN  A       10.88.0.21
-connect-2           IN  A       10.88.0.22
-connect-3           IN  A       10.88.0.23
-trino-coord         IN  A       10.88.0.40
-trino-worker-1      IN  A       10.88.0.41
-trino-worker-2      IN  A       10.88.0.42
-s3                  IN  A       10.88.0.60
-hive                IN  A       10.88.0.80
-mysql               IN  A       10.88.0.99
-postgres            IN  A       10.88.0.100
-apps                IN  A       10.88.0.101
-mail                IN  A       10.88.0.141
-spark-master        IN  A       10.88.0.161
-spark-hs            IN  A       10.88.0.162
-spark-worker-1      IN  A       10.88.0.163
-spark-worker-2      IN  A       10.88.0.164
-nifi                IN  A       10.88.0.181
+ns                      IN  A       10.88.0.2
+ipa                     IN  A       10.88.0.10
+kafka-1                 IN  A       10.88.0.11
+kafka-2                 IN  A       10.88.0.12
+kafka-3                 IN  A       10.88.0.13
+connect-1               IN  A       10.88.0.21
+connect-2               IN  A       10.88.0.22
+connect-3               IN  A       10.88.0.23
+trino-coord             IN  A       10.88.0.40
+trino-worker-1          IN  A       10.88.0.41
+trino-worker-2          IN  A       10.88.0.42
+s3                      IN  A       10.88.0.60
+hive                    IN  A       10.88.0.80
+mysql                   IN  A       10.88.0.99
+postgres                IN  A       10.88.0.100
+apps                    IN  A       10.88.0.101
+mail                    IN  A       10.88.0.141
+spark-master            IN  A       10.88.0.161
+spark-hs                IN  A       10.88.0.162
+spark-worker-1          IN  A       10.88.0.163
+spark-worker-2          IN  A       10.88.0.164
+nifi                    IN  A       10.88.0.181
 
 ; CNAME records
-calendar.apps       IN  CNAME   apps
-*.ozone-gateway     IN  CNAME   ozone-gateway
+calendar.apps           IN  CNAME   apps
 
 ; SRV records
 ; NOTE: Weight should be > 0, for HAProxy to pick as backend
-_mail._tcp          IN  SRV     0 100 80 mail
-_nifi._https        IN  SRV     0 100 8443 nifi
+_mail._tcp              IN  SRV     0 100 80 mail
+_nifi._https            IN  SRV     0 100 8443 nifi
 
 ; HTTPS records
-_8443._https.nifi   IN  HTTPS   0 .
+_8443._https.nifi       IN  HTTPS   0 .
+
+; FreeIPA
+_kerberos-master._tcp   IN  SRV     0 100 88 ipa
+_kerberos-master._udp   IN  SRV     0 100 88 ipa
+_kerberos._tcp          IN  SRV     0 100 88 ipa
+_kerberos._udp          IN  SRV     0 100 88 ipa
+_kerberos               IN  TXT     "SAOIRSE.HOME.ARPA"
+_kerberos               IN  URI     0 100 "krb5srv:m:tcp:ipa.saoirse.home.arpa."
+_kerberos               IN  URI     0 100 "krb5srv:m:udp:ipa.saoirse.home.arpa."
+_kpasswd._tcp           IN  SRV     0 100 464 ipa
+_kpasswd._udp           IN  SRV     0 100 464 ipa
+_kpasswd                IN  URI     0 100 "krb5srv:m:tcp:ipa.saoirse.home.arpa."
+_kpasswd                IN  URI     0 100 "krb5srv:m:udp:ipa.saoirse.home.arpa."
+_ldap._tcp              IN  SRV     0 100 389 ipa

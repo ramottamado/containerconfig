@@ -1,0 +1,103 @@
+<configuration>
+
+    <property>
+        <name>hive.metastore.uris</name>
+        <value>thrift://hive.saoirse.home.arpa:9083</value>
+    </property>
+
+    <property>
+        <name>hive.server2.enable.doAs</name>
+        <value>false</value>
+    </property>
+
+    <property>
+        <name>hive.server2.use.SSL</name>
+        <value>true</value>
+    </property>
+
+    <property>
+        <name>hive.server2.keystore.path</name>
+        <value>/hiveKeyStore.jks</value>
+    </property>
+
+    <property>
+        <name>hive.server2.keystore.password</name>
+        <value>changeit</value>
+    </property>
+
+    <property>
+        <name>hive.server2.transport.mode</name>
+        <value>binary</value>
+    </property>
+
+    <property>
+        <name>hive.server2.authentication</name>
+        <value>LDAP</value>
+    </property>
+
+    <property>
+        <name>hive.server2.authentication.ldap.url</name>
+        <value>ldaps://ipa.saoirse.home.arpa</value>
+    </property>
+
+    <property>
+        <name>hive.server2.authentication.ldap.baseDN</name>
+        <value>cn=users,cn=accounts,dc=saoirse,dc=home,dc=arpa</value>
+    </property>
+
+    <property>
+        <name>hive.server2.historic.operation.log.enabled</name>
+        <value>true</value>
+    </property>
+
+    <property>
+        <name>hive.security.authorization.enabled</name>
+        <value>true</value>
+    </property>
+
+    <property>
+        <name>hive.security.authorization.manager</name>
+        <value>org.apache.hadoop.hive.ql.security.authorization.plugin.sqlstd.SQLStdHiveAuthorizerFactory</value>
+    </property>
+
+    <property>
+        <name>hive.security.authenticator.manager</name>
+        <value>org.apache.hadoop.hive.ql.security.SessionStateUserAuthenticator</value>
+    </property>
+
+    <property>
+        <name>hive.server2.webui.use.ssl</name>
+        <value>true</value>
+    </property>
+
+    <property>
+        <name>hive.server2.webui.keystore.path</name>
+        <value>/hiveKeyStore.jks</value>
+    </property>
+
+    <property>
+        <name>hive.server2.webui.keystore.password</name>
+        <value>changeit</value>
+    </property>
+
+    <property>
+        <name>hive.server2.webui.explain.output</name>
+        <value>true</value>
+    </property>
+
+    <property>
+        <name>hive.server2.webui.show.graph</name>
+        <value>true</value>
+    </property>
+
+    <property>
+        <name>hive.server2.webui.show.stats</name>
+        <value>true</value>
+    </property>
+
+    <property>
+        <name>hive.server2.webui.max.historic.queries</name>
+        <value>100</value>
+    </property>
+
+</configuration>

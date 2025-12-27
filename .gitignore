@@ -1,6 +1,8 @@
 *.pem
 *.key
 *.crt
+*.jks
+*.jar
 *.db
 passwd
 kafka-connect/connectors
