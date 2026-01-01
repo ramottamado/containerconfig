@@ -2,6 +2,7 @@
 
 $config['default_host'] = 'ssl://mail.saoirse.home.arpa';
 $config['imap_host'] = 'ssl://mail.saoirse.home.arpa';
+$config['mail_domain'] = 'saoirse.home.arpa';
 
 $config['imap_conn_options'] = array(
   'ssl' => array(

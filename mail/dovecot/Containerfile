@@ -1,8 +1,11 @@
 FROM alpine:3.22
 
+COPY ca.crt /usr/local/share/ca-certificates/saoirse.crt
+
 RUN apk update && \
-    apk add dovecot && \
-    rm -rf /var/cache/apk/*
+    apk add ca-certificates dovecot dovecot-ldap && \
+    rm -rf /var/cache/apk/* && \
+    update-ca-certificates
 
 EXPOSE 24/tcp
 EXPOSE 143/tcp
